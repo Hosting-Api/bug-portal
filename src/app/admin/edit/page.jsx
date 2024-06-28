@@ -4,7 +4,7 @@ import React from "react";
 
 const getBugs = async () => {
   try {
-    const res = await fetch(`http://localhost:3000/api/bugs/`, {
+    const res = await fetch(`http://bug-portal.vercel.app/api/bugs/`, {
       method: "GET",
       cache: "no-cache",
     });
@@ -15,7 +15,7 @@ const getBugs = async () => {
 };
 
 export default async function Page() {
-  const { bugs } = await getBugs();
+  const bugs  = await getBugs();
 
   const uniqueCategories = [...new Set(bugs?.map(({ category }) => category))];
 
