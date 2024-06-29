@@ -1,13 +1,10 @@
-// src/app/edit/page.js
+// src/app/admin/edit/page.js
 import React from "react";
 import BugCard from "@/app/components/BugCard";
-// import dynamic from "next/dynamic";
-// const BugCardU = dynamic(() => import('../components/BugCardU'), {
-//   ssr: false,
-// })
+
 const getBugs = async () => {
   try {
-    const res = await fetch(`https://bug-portal.vercel.app/api/bugs/`, {
+    const res = await fetch('https://bug-portal.vercel.app/api/bugs/', {
       method: "GET",
       cache: "no-cache",
     });
