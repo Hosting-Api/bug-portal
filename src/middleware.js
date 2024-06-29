@@ -13,11 +13,11 @@ export default withAuth(
         return NextResponse.redirect(new URL("/admin/", req.url));
        }
 
-       if(req.nextUrl.pathname.startsWith("https://bug-portal.vercel.app/admin/edit") 
+       if(req.nextUrl.pathname.startsWith("/admin/edit") 
         && req.nextauth.token?.role !== "admin")
         {
        
-        return NextResponse.redirect(new URL("https://bug-portal.vercel.app/edit", req.url));
+        return NextResponse.redirect(new URL("/edit", req.url));
        }
 
 
