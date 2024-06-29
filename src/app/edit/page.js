@@ -16,7 +16,7 @@ const getBugs = async () => {
 
 // export default async function Page() {
 // export default async function Page() {
-// const Page = async () =>{
+const Page = async () =>{
   // const  bugs = await getBugs();
 
   // const uniqueCategories = [...new Set(bugs.map(({ category }) => category))];
