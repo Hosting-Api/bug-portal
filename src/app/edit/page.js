@@ -27,7 +27,7 @@ export default async function Page() {
       <h3 className="text-center"> List Of Bugs displayed Here </h3>
       <div className="p-5">
         <div>
-          {bugs &&
+          {bugs.length > 0 &&
             uniqueCategories?.map((uniqueCategory, categoryIndex) => (
               <div key={categoryIndex} className="mb-4">
                 <h2>{uniqueCategory}</h2>
