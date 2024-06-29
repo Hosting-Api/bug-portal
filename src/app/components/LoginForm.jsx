@@ -29,7 +29,7 @@ export default function LoginForm ()  {
         setError("Invalid credentials !");
         return;
       }
-      router.replace('/admin/edit');
+      router.replace('/edit');
     } catch (error) {
       console.log(error);
     }
