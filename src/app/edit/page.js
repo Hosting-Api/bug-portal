@@ -26,7 +26,7 @@ const getBugs = async () => {
 };
 
 export default async function Page() {
-  const bugs = await getBugs();
+  const {bugs} = await getBugs();
 
   // Ensure bugs is always an array
   if (!Array.isArray(bugs)) {
