@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link href="/">
           <FontAwesomeIcon icon={faHome} className="icon" />
         </Link>
-        <Link href="/admin/edit">
+        <Link href="/edit">
           {/* <FontAwesomeIcon icon={faTicket} className="icon" /> */}
           <FontAwesomeIcon icon={faPenToSquare} className="icon" />
         </Link>
