@@ -1,45 +1,45 @@
 
-import withAuth from "next-auth/middleware";
-// import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
-import { NextResponse } from "next/server";
+// import withAuth from "next-auth/middleware";
+// // import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
+// import { NextResponse } from "next/server";
 
-// export {default}  from "next-auth/middleware";
-export default withAuth(
-    function middleware (req) {
-       if(req.nextUrl.pathname.startsWith("/admin/dashboard") 
-        && req.nextauth.token?.role !== "admin")
-        {
+// // export {default}  from "next-auth/middleware";
+// export default withAuth(
+//     function middleware (req) {
+//        if(req.nextUrl.pathname.startsWith("/admin/dashboard") 
+//         && req.nextauth.token?.role !== "admin")
+//         {
        
-        return NextResponse.redirect(new URL("/admin/", req.url));
-       }
+//         return NextResponse.redirect(new URL("/admin/", req.url));
+//        }
 
-       if(req.nextUrl.pathname.startsWith("/admin/edit") 
-        && req.nextauth.token?.role !== "admin")
-        {
+//        if(req.nextUrl.pathname.startsWith("/admin/edit") 
+//         && req.nextauth.token?.role !== "admin")
+//         {
        
-        return NextResponse.redirect(new URL("/edit", req.url));
-       }
+//         return NextResponse.redirect(new URL("/edit", req.url));
+//        }
 
 
-       if(req.nextUrl.pathname.startsWith("/bugpage/new") 
-        && req.nextauth.token?.role !== "admin")
-        {
+//        if(req.nextUrl.pathname.startsWith("/bugpage/new") 
+//         && req.nextauth.token?.role !== "admin")
+//         {
        
-        return NextResponse.redirect(new URL("/admin/", req.url));
-       }
+//         return NextResponse.redirect(new URL("/admin/", req.url));
+//        }
       
-       if(req.nextUrl.pathname.startsWith("/adduser") 
-        && req.nextauth.token?.role !== "admin")
-        {
+//        if(req.nextUrl.pathname.startsWith("/adduser") 
+//         && req.nextauth.token?.role !== "admin")
+//         {
        
-        return NextResponse.redirect(new URL("/admin/", req.url));
-       }
-    },
-   { callbacks: {
-        // authorized: ({ token }) => token?.role === "admin",
-        authorized: ({ token }) => !! token,
-      }
-    }
-)
+//         return NextResponse.redirect(new URL("/admin/", req.url));
+//        }
+//     },
+//    { callbacks: {
+//         // authorized: ({ token }) => token?.role === "admin",
+//         authorized: ({ token }) => !! token,
+//       }
+//     }
+// )
 
-export const config = { matcher: ["/dashboard", "/admin/dashboard", "/adduser", '/edit', '/admin/edit', "/bugpage/new" ] }
+// export const config = { matcher: ["/dashboard", "/admin/dashboard", "/adduser", '/edit', '/admin/edit', "/bugpage/new" ] }
