@@ -13,12 +13,12 @@ export default withAuth(
         return NextResponse.redirect(new URL("/admin/", req.url));
        }
 
-       if(req.nextUrl.pathname.startsWith("/admin/edit") 
-        && req.nextauth.token?.role !== "admin")
-        {
+       // if(req.nextUrl.pathname.startsWith("/admin/edit") 
+       //  && req.nextauth.token?.role !== "admin")
+       //  {
        
-        return NextResponse.redirect(new URL("/edit", req.url));
-       }
+       //  return NextResponse.redirect(new URL("/edit", req.url));
+       // }
 
 
        if(req.nextUrl.pathname.startsWith("/bugpage/new") 
