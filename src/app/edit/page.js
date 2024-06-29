@@ -10,7 +10,7 @@ const BugCardU = dynamic(() => import('../components/BugCardU'), {
 const getBugs = async () => {
   
   try {
-    const res = await fetch(`http://bug-portal.vercel.app/api/bugs/`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/bugs/`, {
       method: "GET",
       cache: "no-cache",
     });
