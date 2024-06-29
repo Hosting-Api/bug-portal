@@ -8,7 +8,7 @@ import BugCard from "@/app/components/BugCard";
 
 const getBugs = async () => {
   try {
-    const res = await fetch(`https://bug-portal.vercel.app/api/bugs/`, {
+    const res = await fetch('https://bug-portal.vercel.app/api/bugs/', {
       method: "GET",
       cache: "no-cache",
     });
