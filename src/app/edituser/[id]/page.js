@@ -40,7 +40,7 @@ const getUserById = async (id) => {
   // const router = useRouter();
 
   try {
-      const res = await fetch(`http://localhost:3000/api/edituser/${id}`, {
+      const res = await fetch(`http://bug-portal.vercel.app/api/edituser/${id}`, {
           cache: "no-store",
       });
 
