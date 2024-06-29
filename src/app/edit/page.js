@@ -59,5 +59,5 @@ export default Page;
 
   // const uniqueCategories = [...new Set(bugs.map(({ category }) => category))];
    
-   
+   }
  }
