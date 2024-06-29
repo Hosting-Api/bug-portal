@@ -18,7 +18,7 @@ const getBugs = async () => {
 const Page = async () =>{
   const  bugs = await getBugs();
 
-  const uniqueCategories = [...new Set(bugs?.map(({ category }) => category))];
+  const uniqueCategories = [...new Set(bugs.map(({ category }) => category))];
 
   return (
     <>
@@ -26,7 +26,7 @@ const Page = async () =>{
       <div className="p-5">
         <div>
           {bugs &&
-            uniqueCategories?.map((uniqueCategory, categoryIndex) => (
+            uniqueCategories.map((uniqueCategory, categoryIndex) => (
               <div key={categoryIndex} className="mb-4">
                 <h2>{uniqueCategory}</h2>
                 <div className="lg:grid grid-cols-2 xl:grid-cols-4">
