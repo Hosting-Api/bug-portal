@@ -1,6 +1,6 @@
 // src/app/edit/page.js
 import React from "react";
-import BugCardU from "@/app/components/BugCardU";
+import BugCard from "@/app/components/BugCard";
 // import dynamic from "next/dynamic";
 // const BugCardU = dynamic(() => import('../components/BugCardU'), {
 //   ssr: false,
@@ -52,7 +52,7 @@ export default async function Page() {
                   {bugs
                     .filter((bug) => bug.category === uniqueCategory)
                     .map((filteredBug, _index) => (
-                      <BugCardU id={_index} key={_index} bug={filteredBug} />
+                      <BugCard id={_index} key={_index} bug={filteredBug} />
                     ))}
                 </div>
               </div>
