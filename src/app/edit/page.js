@@ -1,9 +1,10 @@
 // import BugCard from "@/BugCard";
+'use server'
 import React from "react";
 import BugCardU from "../components/BugCardU";
 
 const getBugs = async () => {
-  'use server'
+  
   try {
     const res = await fetch(`http://bug-portal.vercel.app/api/bugs/`, {
       method: "GET",
