@@ -50,7 +50,7 @@ const Page = async () =>{
 
 
 export default Page;
- export default async function getServerSideProps() {
+ export async function getServerSideProps() {
    const  bugs = await getBugs();
    return {
      props: {
