@@ -1,7 +1,11 @@
 // import BugCard from "@/BugCard";
-'use server'
+// 'use server'
 import React from "react";
-import BugCardU from "../components/BugCardU";
+// import BugCardU from "../components/BugCardU";
+import dynamic from "next/dynamic";
+const BugCardU = dynamic(() => import('../components/BugCardU'), {
+  ssr: false,
+})
 
 const getBugs = async () => {
   
