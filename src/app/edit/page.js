@@ -13,12 +13,13 @@ const getBugs = async () => {
       method: "GET",
       cache: "no-cache",
     });
+    return res.json();
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
-    const data = await res.json();
+    // const data = await res.json();
     // Ensure the data is an array
-    return Array.isArray(data) ? data : [];
+    // return Array.isArray(data) ? data : [];
   } catch (error) {
     console.log("Failed to get Bugs", error);
     return []; // Return an empty array in case of error
