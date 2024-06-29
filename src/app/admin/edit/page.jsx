@@ -1,6 +1,6 @@
 // src/app/edit/page.js
 import React from "react";
-import BugCard from "../components/BugCard";
+import BugCard from "@/app/components/BugCard";
 // import dynamic from "next/dynamic";
 // const BugCardU = dynamic(() => import('../components/BugCardU'), {
 //   ssr: false,
