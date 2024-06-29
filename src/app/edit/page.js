@@ -38,7 +38,7 @@ export default async function Page() {
     );
   }
 
-  const uniqueCategories = [...new Set(bugs.map(({ category }) => category))];
+  const uniqueCategories = [...new Set(bugs?.map(({ category }) => category))];
 
   return (
     <>
@@ -46,7 +46,7 @@ export default async function Page() {
       <div className="p-5">
         <div>
           {bugs.length > 0 &&
-            uniqueCategories.map((uniqueCategory, categoryIndex) => (
+            uniqueCategories?.map((uniqueCategory, categoryIndex) => (
               <div key={categoryIndex} className="mb-4">
                 <h2>{uniqueCategory}</h2>
                 <div className="lg:grid grid-cols-2 xl:grid-cols-4">
