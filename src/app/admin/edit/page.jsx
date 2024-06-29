@@ -25,17 +25,17 @@ const getBugs = async () => {
 };
 
 export default async function Page() {
-  const bugs = await getBugs();
+  const {bugs} = await getBugs();
 
   // Ensure bugs is always an array
-  if (!Array.isArray(bugs)) {
-    console.error("Expected bugs to be an array, but got", typeof bugs);
-    return (
-      <div className="text-center">
-        <h3>Failed to load bugs. Please try again later.</h3>
-      </div>
-    );
-  }
+  // if (!Array.isArray(bugs)) {
+  //   console.error("Expected bugs to be an array, but got", typeof bugs);
+  //   return (
+  //     <div className="text-center">
+  //       <h3>Failed to load bugs. Please try again later.</h3>
+  //     </div>
+  //   );
+  // }
 
   const uniqueCategories = [...new Set(bugs?.map(({ category }) => category))];
 
