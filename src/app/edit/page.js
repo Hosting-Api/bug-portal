@@ -17,9 +17,9 @@ const getBugs = async () => {
 // export default async function Page() {
 // export default async function Page() {
 const Page = async () =>{
-  // const  bugs = await getBugs();
+  const  bugs = await getBugs();
 
-  // const uniqueCategories = [...new Set(bugs.map(({ category }) => category))];
+  const uniqueCategories = [...new Set(bugs.map(({ category }) => category))];
 
   return (
     <>
@@ -50,14 +50,3 @@ const Page = async () =>{
 
 
 export default Page;
- export async function getServerSideProps() {
-   const  bugs = await getBugs();
-   return {
-     props: {
-       bugs,
-   },
-
-  // const uniqueCategories = [...new Set(bugs.map(({ category }) => category))];
-   
-   }
- }
