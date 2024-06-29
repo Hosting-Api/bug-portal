@@ -4,7 +4,7 @@ import React from 'react'
 
 const getBugByID = async (id) => {
   try {
-    const res = await fetch(`http://bug-portal.vercel.app/api/bugs/${id}`,
+    const res = await fetch(`https://bug-portal.vercel.app/api/bugs/${id}`,
       {
         cache: 'no-store',
       })
