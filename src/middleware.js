@@ -42,5 +42,5 @@ export default withAuth(
     }
 )
 
-export const config = { matcher: ["/dashboard", "/adduser" ] }
-// export const config = { matcher: ["/dashboard", "/admin/dashboard", "/adduser", '/admin/edit', "/bugpage/new" ] }
+// export const config = { matcher: ["/dashboard", "/adduser" ] }
+export const config = { matcher: ["/dashboard", "/admin/dashboard", "/adduser", '/admin/edit', "/bugpage/new" ] }
