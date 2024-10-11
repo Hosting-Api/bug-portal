@@ -1,6 +1,6 @@
 
 import withAuth from "next-auth/middleware";
-// import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
+import { URL } from "next/dist/compiled/@edge-runtime/primitives/url";
 import { NextResponse } from "next/server";
 
 // export {default}  from "next-auth/middleware";
